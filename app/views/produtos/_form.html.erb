@@ -25,8 +25,8 @@
 
   
        <div class="col-lg-2 form-group">   
-           <%= form.label :validade, :class => 'control-label required' %>
-           <%= form.text_field :validade,  :class => 'form-control' %>
+           <%= form.label :data_validade, :class => 'control-label required' %>
+           <%= form.text_field :data_validade,:type=>'date',  :class => 'form-control' %>
        </div>
 
   
@@ -43,14 +43,14 @@
 
   
        <div class="col-lg-2 form-group">   
-           <%= form.label :quantidade, :class => 'control-label required ' %>
-           <%= form.text_field :quantidade,  :class => 'form-control' %>
+           <%= form.label :qtd, :class => 'control-label required ' %>
+           <%= form.text_field :qtd,  :class => 'form-control' %>
        </div>
 
   
-       <div class="col-lg-4 form-group">   
-           <%= form.label :fornecedor, :class => 'control-label required ' %>
-           <%= form.text_field :fornecedor,  :class => 'form-control' %>
+       <div class="col-lg-12 form-group">   
+           <%= form.label :fornecedor_id, :class => 'control-label required' %>
+           <%= form.collection_select :fornecedor_id, Fornecedor.all, :id, :nome, {:prompt => 'Selecionar'}, :class => 'form-control',:required=>true %> 
        </div>
       </div>
    <div class="row">
